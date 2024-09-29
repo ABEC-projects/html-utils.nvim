@@ -13,6 +13,7 @@ function M.tag_under_cursor_newline()
 end
 
 function M.setup(opts)
+    opts = opts or {}
     local tucn_map = opts.tag_newline or "<c-T>"
     local tuc_map = opts.tag or "<c-t>"
     vim.keymap.set("i", tucn_map, M.tag_under_cursor_newline, {})
